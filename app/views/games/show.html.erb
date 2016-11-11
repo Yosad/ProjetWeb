@@ -1,0 +1,34 @@
+<FONT face="georgia">
+<FONT size="4pt">
+
+
+<article>
+	<h1 align="center"><b><%= @game.title %></b></h1>
+	<br>
+	<center><img src="<%= @game.image.url(:medium) %>" alt="<%= @game.title %>"></center>
+	<br>
+	<%= @game.description %>
+	<hr>
+	<section>
+	    <% @game.videos.each do |video| %>
+		<h3><a href="<%= video_path(@game.slug, video.slug) %>"><%= video.place %>. <%= video.title %></a></h3>
+		<%= video.description %>
+		<hr>
+	    <% end %>
+	</section>
+
+	<hr>
+
+	<div>
+        <label for="message">Comments :</label>
+        <textarea id="message"></textarea>
+    </div>
+</article>
+
+<br>
+<br>
+<br>
+<br>
+
+</FONT>
+</FONT>
