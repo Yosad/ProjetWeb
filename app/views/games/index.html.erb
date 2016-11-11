@@ -6,22 +6,26 @@
 
 <h1 align="center"><b><%= @games.count %> jeux disponibles</b></h1>
 
-<%= @games.in_groups_of(3, false).each do |group| %>
-
-  <div class="row">
-    <% group.each do |game| %>
-    	<div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-         		<%= image_tag game.image.url(:medium), alt: game.title %>
-          	<div class="caption">
-            	<h3><%= game.title %></h3>
-            	<p><%= truncate(game.description, length: 50) %></p>
-            	<p><%= link_to "Je veux en savoir plus", game_path(game.slug), class: "btn btn-primary", role: "button" %></p>
-            </div>
-        </div>
+<% @games.in_groups_of(3, false).each do |group| %>
+<br>
+<br>
+<div class="row">
+   <% group.each do |game| %>
+      <div class="col-sm-3 col-md-4">
+         <div class="thumbnail">
+               <div class="caption">
+                  <h3 align="center"><b><%= game.title %></b></h3>
+      <center><img src="<%= game.image.url(:medium) %>" alt="<%= game.title %>"></center>
+                  <p align="center"><%= truncate(game.description, lenght: 30) %></p>
+                  <p align="center">Le stock est de : <%= game.stock %></p>
+                  <p align="center"><%= link_to "Je veux en savoir plus", game_path(game.slug), class: "bin bin-primary", role: "button" %></p>
+         </div>
+         </div>
       </div>
-    <% end %>
-  </div>
+
+   <% end %>
+
+</div>
 <% end %>
 
 <br>
