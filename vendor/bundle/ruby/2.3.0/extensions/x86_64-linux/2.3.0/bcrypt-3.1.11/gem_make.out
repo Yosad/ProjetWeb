@@ -1,5 +1,19 @@
 current directory: /home/yoav/ProjetWeb/vendor/bundle/ruby/2.3.0/gems/bcrypt-3.1.11/ext/mri
-/usr/bin/ruby2.3 -r ./siteconf20161110-2937-fj8xos.rb extconf.rb
-mkmf.rb can't find header files for ruby at /usr/lib/ruby/include/ruby.h
+/usr/bin/ruby2.3 -r ./siteconf20161124-2019-mhildf.rb extconf.rb
+creating Makefile
 
-extconf failed, exit code 1
+current directory: /home/yoav/ProjetWeb/vendor/bundle/ruby/2.3.0/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR=" clean
+
+current directory: /home/yoav/ProjetWeb/vendor/bundle/ruby/2.3.0/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR="
+compiling bcrypt_ext.c
+compiling crypt.c
+compiling crypt_blowfish.c
+compiling crypt_gensalt.c
+compiling wrapper.c
+linking shared-object bcrypt_ext.so
+
+current directory: /home/yoav/ProjetWeb/vendor/bundle/ruby/2.3.0/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20161124-2019-ocrt7y
